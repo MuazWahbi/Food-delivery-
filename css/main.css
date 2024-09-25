@@ -1,0 +1,142 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    --bgcolor:#262d33;
+    --maincolor:#f0a511;
+    --acscolor:rgb(70, 25, 25);
+    --tcolor:#d1d1d1;
+}
+body{
+    background-color:var(--bgcolor);
+    color: white;
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 13px;
+    }
+}
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+    .container {
+        width: 90%;
+        max-width: 800px;
+    }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+    .container {
+        width: 85%;
+        max-width: 1000px;
+    }
+}
+@media (min-width: 1201px) {
+    .container {
+        width: 80%;
+        max-width: 1200px;
+    }
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+h3{
+    font-size: 2em;
+    font-weight: bold;
+}
+/* start account form */
+.accunt{
+    width: 400px;
+    max-width: 95%;
+    background-color: var(--acscolor);
+    border-radius: 10px;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 3px 3px 3px 3px black;
+    input,label{
+        width: 90%;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 0px;
+        margin-bottom: 20px;
+        color: white;
+        background-color: transparent;
+        border-bottom: 2px solid #f0a611a9;
+        caret-color: var(--maincolor);
+    }
+    input:focus{
+        outline: none;
+        border-color: #f0a511;
+    }
+    input:last-of-type{
+        font-weight: bold;
+        background-color: var(--maincolor);
+        transition: all 200ms;
+    }
+    input:last-of-type:hover{
+        background-color: #bc810c;
+        cursor: pointer;
+        border: none;
+    }
+    .custom-checkbox {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        padding: 0px;
+        margin-top: -15px;
+        color:var(--tcolor);
+        border: none;
+    }
+    .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .custom-checkbox .checkmark {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 20px;
+        width: 20px;
+        background-color: var(--bgcolor); 
+        border: 2px solid var(--maincolor); 
+        border-radius: 4px; 
+    }
+    .custom-checkbox input:checked + .checkmark {
+        background-color:var(--maincolor);
+        border-color: var(--maincolor);
+    }
+    .custom-checkbox .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 6px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+    }
+    .custom-checkbox input:checked + .checkmark:after {
+        display: block;
+    }
+}
+/* end account form */
